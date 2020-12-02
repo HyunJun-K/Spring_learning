@@ -11,9 +11,12 @@ public class result_data {
 	// 그럼여기서 의존 하는 객체가 변경이 된다면 어떻게 될까 ? 
 	// 의존하는 객체가 변경이 되면 다시 컴파이를 해야한다 다시 손을 ㄷ야한다.
 	// 계속 의존객체를 바꿔주는것도 귀찮고...
-	
 	// 그럼 ? 외부에서 진입하는것은 어떨까? 
 	// Spring은 Dependency Injection를 지원한다. 
+	
+	
+	
+	//기존 인터페이스를 사용한 방식
 	public static void main(String[] args) {
 
 		//helloBeans msg = new helloBeans(); 

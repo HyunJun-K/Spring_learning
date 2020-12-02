@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<!-- 스코어 를 의존 주입하기 위해 빈 객체를 만들어줌  -->
+	<!-- 지금은 getter 를 생성해줬지만 매개변수를 따로 지정해주지 않았기 때문에 0이 나온다 -->
+	<bean id="score" class="com.mycompany.beans_exam.Score_nolombok"/>
+	
+	<!-- 매개변수를 지정하는 빈 생성 -->
+	<!-- 매개변수는 constructor-arg를 사용한다 -->
+	
+	<bean id="arg_score" class="com.mycompany.beans_exam.Score_nolombok">
+		<!-- Score_nolombok 에서 설정한 순서대로 매개변수를 만들어주면 자동으로 매개변수를 넣어준다.	 -->
+		<constructor-arg value="88"></constructor-arg>
+		<constructor-arg value="90"></constructor-arg>
+		<constructor-arg value="88"></constructor-arg>
+		<constructor-arg value="잘했어요"></constructor-arg>
+	</bean>
+	
+	
+	<!-- index를 사용하는 방법   0번부터 시작한다 -->
+	
+	<bean id= "index_score" class="com.mycompany.beans_exam.Score_nolombok">
+		<constructor-arg index="2" value="88"></constructor-arg>
+		<constructor-arg index="0" value="90"></constructor-arg>
+		<constructor-arg index="1" value="88"></constructor-arg>
+		<constructor-arg index="3" value="잘했어요"></constructor-arg>
+	</bean>
+	
+	
+</beans>
