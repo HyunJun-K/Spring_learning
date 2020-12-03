@@ -10,6 +10,7 @@
 		<config>src/main/resources/appCtx.xml</config>
 		<config>src/main/resources/scoreCtx.xml</config>
 		<config>src/main/resources/autowiredCtx1.xml</config>
+		<config>src/main/resources/EnvCtx.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
